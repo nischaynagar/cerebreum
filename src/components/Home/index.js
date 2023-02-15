@@ -4,11 +4,17 @@ import aibotCrouselIcon from "../assests/images/icon-aibots-crousel.svg";
 import staketokenCrouselIcon from "../assests/images/icon-staketoken-crousel.svg";
 import chart from "../assests/images/icon-chart.svg" ;
 import binanceIcon from "../assests/images/icon-binance.svg";
+import stakingIcon from "../assests/images/icon-staking.svg";
 import "./style.css";
+import Navbar from '../Navbar';
 export default function Home()
 {
     return (
-        <div className='mainWrapper'>
+        <>
+        <div className='backdropDiv1'>
+            <div className='mainWrapper1'>
+            <Navbar/>
+
             <div className='titleContent'>
                 <div className='transparentBtn'>Cerebreum</div>
                 <div className='mainHeadingTxt'>First&nbsp;Ever,<br/>Sustainable&nbsp;&<br/>Compounding,<br/><div className='gradientTxt'>APY&nbsp;Token</div></div>
@@ -36,7 +42,10 @@ export default function Home()
                     </div>
                 </div>
             </div>
-
+            </div>
+        </div>
+        <div className='backdropDiv2'>
+        <div className='mainWrapper2'>
             <div className='tokenomicsWrapper'>
                 <img src={chart} alt="chart"/>
                 <div className='tokenomics'>
@@ -77,7 +86,8 @@ export default function Home()
             </div>
 
             <div className='contactUs'>
-                <div className='contactUsHeading'>Are you an institution or large investor?</div>
+                <div className='contactUsHeading'>Cerebreum Grant & Partners</div>
+                <div className='infoTxt'>We are offering a grant program as well as potential partnerships with teams utilizing the $CERAI token, building amazing trading systems & more!</div>
                 <div className='contactUsBtn'>Contact us</div>
             </div>
             <div className='binanceDiv'>
@@ -86,6 +96,17 @@ export default function Home()
                 <img src={binanceIcon} alt="binance-icon" />
                 <img src={binanceIcon} alt="binance-icon" />
             </div>
+            <div className='stakingWrapper'>
+                <div className='stakingheadingWrapper'>
+                <div>High APY Staking</div>
+                <div className='stakingUnderline'></div>
+                </div>
+                <div className='stakingImgWrapper'>
+                    <img src={stakingIcon} alt="staking-img"/>
+                </div>
+            </div>
         </div>
+        </div>
+        </>
     );
 }

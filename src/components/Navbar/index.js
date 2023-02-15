@@ -28,36 +28,21 @@ export default function Navbar(props) {
   
 
   return (
-    <>
-      <header className="primary-header">
-        <div className="container mobile-width">
+      <>
           <div className="nav-wrapper" id='nav-wrapper' ref={myNav}>
             <div className="logo" ref={myLogo}>
               <img src={Logo} alt="Manage" />
             </div>
-            {menu?<button onClick={toggleIcon} className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-              
-              <CloseIcon className="icon-close" aria-hidden="true"/>
-              {/* <MenuIcon className="icon-hamburger" aria-hidden="true" /> */}
-              <span className="visually-hidden">Menu</span>
-            </button>
-            :<button onClick={toggleIcon} className="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-              {/* <CloseIcon className="icon-close" aria-hidden="true" /> */}
-              <Menu className="icon-hamburger" aria-hidden="true" />
-              <span className="visually-hidden">Menu</span>
-            </button>}
             <nav className="primary-navigation">
               <ul className="nav-list" aria-label="Primary" id="primary-navigation" ref={myList}>
                 <li>How&nbsp;it&nbsp;works</li>
                 <li>Tokenomics</li>
-                <li>WhitePaper</li>
+                <li>Whitepaper</li>
                 <li className='toggleDisplay'><button  className="button">Buy&nbsp;Now</button></li>
               </ul>
             </nav>
-            <button  className="button display-sm-hidden display-md-inline-flex">Contact&nbsp;Us</button>
+            <div  className="button display-sm-hidden display-md-inline-flex">Contact&nbsp;us</div>
           </div>
-        </div>
-      </header>
-    </>
+      </>
     )
   }

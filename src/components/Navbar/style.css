@@ -2,11 +2,12 @@
 
 
 .primary-header {
+    width: 100%;
     z-index: 5;
     padding-top: 1rem;
     display: grid;
     place-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
   }
 
@@ -16,11 +17,11 @@
   }
   
   .nav-wrapper {
-    padding: 1em 3em;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-radius: 30px;
+    top: 0;
+    width: 100%;
   }
   
   .mobile-nav-toggle {
@@ -52,12 +53,17 @@
     display: flex;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 .logo img{
     width: 90px;
 }
 .button {
     display: inline-flex; 
+    background: linear-gradient(90deg, rgba(255, 0, 91, 0.2) 2.61%, rgba(171, 87, 255, 0.2) 48.6%, rgba(0, 164, 255, 0.2) 96.37%);
+    backdrop-filter: blur(2px);
+    padding: 10px 35px;
+    cursor: pointer;
   }
   
 .display-sm-hidden {
