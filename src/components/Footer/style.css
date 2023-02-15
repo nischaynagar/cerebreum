@@ -1,0 +1,16 @@
+.Footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+    background: #241E39;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.Footer img{
+    width: 80px;
+}
