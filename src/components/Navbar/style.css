@@ -38,7 +38,8 @@
   
   .nav-list {
     display: flex;
-    gap: clamp(1rem, 5vw, 3rem);
+    /* gap: clamp(1rem, 5vw, 3rem); */
+    gap: clamp(1rem, 0vw, 3rem);
     font-weight: var(--fw-semi-bold);
   }
   
@@ -59,11 +60,14 @@
     width: 90px;
 }
 .button {
-    display: inline-flex; 
-    background: linear-gradient(90deg, rgba(255, 0, 91, 0.2) 2.61%, rgba(171, 87, 255, 0.2) 48.6%, rgba(0, 164, 255, 0.2) 96.37%);
-    backdrop-filter: blur(2px);
+    display: inline-flex; backdrop-filter: blur(2px);
     padding: 10px 35px;
     cursor: pointer;
+    border: 2px solid;
+    border-radius: 5px;
+    border-image: url("../assests/images/btn-bg.svg") 1 30 round;
+    backdrop-filter: blur(15px);
+    background: rgba(217, 217, 217, 0.13);
   }
   
 .display-sm-hidden {
@@ -77,6 +81,12 @@
 .toggleDisplay{
   display: none;
 }
+
+.menuIcon{
+  margin-left: auto;
+  display: none;
+}
+
 @media(min-width: 50em){
     .display-md-inline-flex{
         display: inline-flex;
@@ -101,7 +111,7 @@
       inset: 1rem 0 auto;
       max-width: 15rem;
       margin-left: auto;
-      background: #035D68;
+      background: black;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
       box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
@@ -139,11 +149,11 @@
       border: 0;
       padding: 0.5em;
     }
-
-    .logo img{
-        transform: scale(0.8);
-    }
-
   }
+  
 
- 
+ @media only screen and (max-width : 650px) {
+  .menuIcon{
+    display: flex;
+  }
+ }

@@ -2,6 +2,7 @@ import React, {  useRef, useState } from 'react';
 import "./style.css";
 import {ReactComponent as Menu}from "../assests/images/icon-hamburger.svg";
 import {ReactComponent as CloseIcon} from "../assests/images/icon-close.svg";
+import menuIcon from "../assests/images/icon-menu.svg";
 import Logo from "../assests/images/Logo.svg";
 
 export default function Navbar(props) {
@@ -33,7 +34,7 @@ export default function Navbar(props) {
             <div className="logo" ref={myLogo}>
               <img src={Logo} alt="Manage" />
             </div>
-            <nav className="primary-navigation">
+            <nav className="primary-navigation" style={{display: menu? "flex" : "none"}}>
               <ul className="nav-list" aria-label="Primary" id="primary-navigation" ref={myList}>
                 <li>How&nbsp;it&nbsp;works</li>
                 <li>Tokenomics</li>
@@ -42,6 +43,7 @@ export default function Navbar(props) {
               </ul>
             </nav>
             <div  className="button display-sm-hidden display-md-inline-flex">Contact&nbsp;us</div>
+            <img onClick={()=>setmenu(!menu)} className='menuIcon' src={menuIcon}  alt="menu-icon" />
           </div>
       </>
     )

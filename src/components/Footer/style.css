@@ -13,4 +13,15 @@
 
 .Footer img{
     width: 80px;
+    cursor: pointer;
+}
+
+@media  only screen and (max-width: 650px)
+{
+    .Footer{
+        font-size: 0.6rem;
+    }
+    .Footer img{
+        width: 50px;
+    }
 }
