@@ -34,7 +34,7 @@ export default function Navbar(props) {
             <div className="logo" ref={myLogo}>
               <img src={Logo} alt="Manage" />
             </div>
-            <nav className="primary-navigation" style={{display: menu? "flex" : "none"}}>
+            <nav className="primary-navigation">
               <ul className="nav-list" aria-label="Primary" id="primary-navigation" ref={myList}>
                 <li>How&nbsp;it&nbsp;works</li>
                 <li>Tokenomics</li>
