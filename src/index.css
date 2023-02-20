@@ -26,7 +26,7 @@
   
   html,
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 100%;
     font-family: 'Open Sans';
   }
@@ -119,4 +119,9 @@ html{
 
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
+}
+a{
+  text-decoration: none;
+  outline: none;
+  color: white;
 }

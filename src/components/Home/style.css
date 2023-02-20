@@ -15,7 +15,6 @@
     flex-direction: column;
     padding: 2em 4em 7em 4em;
     align-items: center;
-    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
     backdrop-filter: brightness(0.5);
 }
 
@@ -33,7 +32,12 @@
     background-image: url("../assests/images/bg-img1.png");
     background-position: center;
 }
-
+.container-mainWrapper1{
+    --max-width: 2050px;
+    --container-padding: 1em;
+    width: min(var(--max-width), 100%);
+    margin-inline: auto;
+}
 .backdropDiv2{
     background-image: url("../assests/images/bg-img2.png");
     background-position: center;
@@ -474,3 +478,9 @@ b{
         max-width: 150px;
       }
 }
+.backdropDiv1>div{
+    overflow-x: hidden;
+}
+/* .mainWrapper2>div{
+    overflow-x: hidden;
+} */

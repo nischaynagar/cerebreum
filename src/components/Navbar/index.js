@@ -1,15 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { ReactComponent as Menu } from "../assests/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "../assests/images/icon-close.svg";
-import menuIcon from "../assests/images/icon-menu.svg";
 import Logo from "../assests/images/Logo.svg";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [menu, setmenu] = useState(false);
-  const myNav = useRef();
-  const myLogo = useRef();
-  const myList = useRef();
 
   function toggleIcon() {
     const primaryNav = document.querySelector(".primary-navigation");
@@ -25,37 +21,85 @@ export default function Navbar(props) {
     primaryHeader.toggleAttribute("data-overlay");
   }
 
+  const handleClick = (event, id) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (id === "home")
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    else {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <>
-      <div className="nav-wrapper" id="nav-wrapper" ref={myNav}>
-        <div className="logo" ref={myLogo}>
-          <img src={Logo} alt="Manage" />
+      <header className="primary-header">
+        <div className="container mobile-width">
+          <div className="nav-wrapper" id="nav-wrapper">
+            <div className="logo">
+              <a href="#home" onClick={(e) => handleClick(e, "home")}>
+                <img src={Logo} alt="Manage" />
+              </a>
+            </div>
+            {menu ? (
+              <button
+                onClick={toggleIcon}
+                className="mobile-nav-toggle"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+              >
+                <CloseIcon className="icon-close" aria-hidden="true" />
+                {/* <MenuIcon className="icon-hamburger" aria-hidden="true" /> */}
+                <span className="visually-hidden">Menu</span>
+              </button>
+            ) : (
+              <button
+                onClick={toggleIcon}
+                className="mobile-nav-toggle"
+                aria-controls="primary-navigation"
+                aria-expanded="false"
+              >
+                {/* <CloseIcon className="icon-close" aria-hidden="true" /> */}
+                <Menu className="icon-hamburger" aria-hidden="true" />
+                <span className="visually-hidden">Menu</span>
+              </button>
+            )}
+            <nav className="primary-navigation">
+              <ul
+                className="nav-list"
+                aria-label="Primary"
+                id="primary-navigation"
+              >
+                <li>
+                  <a
+                    href="#howitworks"
+                    onClick={(e) => handleClick(e, "howItWorksSection")}
+                  >
+                    How&nbsp;it&nbsp;works
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#tokenomics"
+                    onClick={(e) => handleClick(e, "tokenomicsWrapper")}
+                  >
+                    Tokenomics
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Whitepaper</a>
+                </li>
+                <li className="toggleDisplay">
+                  <div className="button">Dapp</div>
+                </li>
+              </ul>
+            </nav>
+            <div className="button display-sm-hidden display-md-inline-flex">
+              Dapp
+            </div>
+          </div>
         </div>
-        <nav className="primary-navigation">
-          <ul
-            className="nav-list"
-            aria-label="Primary"
-            id="primary-navigation"
-            ref={myList}
-          >
-            <li>How&nbsp;it&nbsp;works</li>
-            <li>Tokenomics</li>
-            <li>Whitepaper</li>
-            <li className="toggleDisplay">
-              <button className="button">Buy&nbsp;Now</button>
-            </li>
-          </ul>
-        </nav>
-        <div className="button display-sm-hidden display-md-inline-flex">
-          Contact&nbsp;us
-        </div>
-        <img
-          onClick={() => setmenu(!menu)}
-          className="menuIcon"
-          src={menuIcon}
-          alt="menu-icon"
-        />
-      </div>
+      </header>
     </>
   );
 }

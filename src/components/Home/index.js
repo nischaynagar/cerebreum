@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import buytokenCrouselIcon from "../assests/images/icon-buytoken-crousel.svg";
 import aibotCrouselIcon from "../assests/images/icon-aibots-crousel.svg";
 import staketokenCrouselIcon from "../assests/images/icon-staketoken-crousel.svg";
@@ -10,26 +10,30 @@ import Navbar from "../Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
 export default function Home() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  });
   return (
     <>
       <div className="backdropDiv1">
-        <div className="mainWrapper1">
-          <Navbar />
-
-          <div className="titleContent">
-            <div className="transparentBtn">Cerebreum</div>
-            <div className="mainHeadingTxt">
-              First&nbsp;Ever,
-              <br />
-              Sustainable&nbsp;&
-              <br />
-              Compounding,
-              <br />
-              <div className="gradientTxt">APY&nbsp;Token</div>
-            </div>
-            <div className="buyBtnWrapper">
-              <div className="btn1">Buy&nbsp;the&nbsp;token</div>
-              <div className="btn2">Stake&nbsp;Now</div>
+        <Navbar />
+        <div className="container-mainWrapper1">
+          <div className="mainWrapper1" data-aos="fade-up">
+            <div className="titleContent">
+              <div className="transparentBtn">Cerebreum</div>
+              <div className="mainHeadingTxt">
+                First&nbsp;Ever,
+                <br />
+                Sustainable&nbsp;&
+                <br />
+                Compounding,
+                <br />
+                <div className="gradientTxt">APY&nbsp;Token</div>
+              </div>
+              <div className="buyBtnWrapper">
+                <div className="btn1">Buy&nbsp;the&nbsp;token</div>
+                <div className="btn2">Stake&nbsp;Now</div>
+              </div>
             </div>
           </div>
         </div>
@@ -37,7 +41,11 @@ export default function Home() {
 
       <div className="backdropDiv2">
         <div className="mainWrapper2">
-          <div className="howItWorksSection">
+          <div
+            id="howItWorksSection"
+            className="howItWorksSection"
+            data-aos="fade-up"
+          >
             <div className="headingUnderlineWrapper">
               <div className="howItWorksHeading">How&nbsp;it&nbsp;works</div>
               <div className="styledUnderline"></div>
@@ -73,7 +81,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="tokenomicsWrapper">
+          <div
+            id="tokenomicsWrapper"
+            className="tokenomicsWrapper"
+            data-aos="fade-up"
+          >
             <img src={chart} alt="chart" />
             <div className="tokenomics">
               <div className="tokenomicsFeatures">
@@ -128,7 +140,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="contactUs">
+          <div className="contactUs" data-aos="fade-up">
             <div className="contactUsHeading">Cerebreum Grant & Partners</div>
             <div className="infoTxt">
               We are offering a grant program as well as potential partnerships
@@ -159,7 +171,7 @@ export default function Home() {
               alt="binance-icon"
             />
           </div>
-          <div className="stakingWrapper">
+          <div className="stakingWrapper" data-aos="fade-up">
             <div className="stakingheadingWrapper">
               <div className="stakingHeading">High APY Staking</div>
               <div className="styledUnderline"></div>
