@@ -477,6 +477,9 @@ b{
       .binanceDiv img{
         max-width: 150px;
       }
+      .buyBtnWrapper{
+        transform: translateX(-10px);
+      }
 }
 .backdropDiv1>div{
     overflow-x: hidden;

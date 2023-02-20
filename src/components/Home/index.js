@@ -2,9 +2,14 @@ import React, { useEffect } from "react";
 import buytokenCrouselIcon from "../assests/images/icon-buytoken-crousel.svg";
 import aibotCrouselIcon from "../assests/images/icon-aibots-crousel.svg";
 import staketokenCrouselIcon from "../assests/images/icon-staketoken-crousel.svg";
+import matrixlabsIcon from "../assests/images/icon-matrixlabs.svg";
 import chart from "../assests/images/icon-chart.svg";
 import binanceIcon from "../assests/images/icon-binance.svg";
 import stakingIcon from "../assests/images/icon-staking.svg";
+import BenzingaLogo from "../assests/images/Benzinga-Logo-768x432.png";
+import CoinDeskLogo from "../assests/images/CoinDesk-logo.png";
+import ForbesPng from "../assests/images/forbes-png.png";
+import YahooLogo from "../assests/images/Yahoo.png";
 import "./style.css";
 import Navbar from "../Navbar";
 import Aos from "aos";
@@ -13,10 +18,37 @@ export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   });
+  const handleDragStart = (e) => e.preventDefault();
+  const items = [
+    <img
+      src={BenzingaLogo}
+      className="bnbIcon"
+      alt="binance-icon"
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src={CoinDeskLogo}
+      alt="pinksale-icon"
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src={ForbesPng}
+      className="coinmarketcapIcon"
+      alt="coinmarketcap-icon"
+      onDragStart={handleDragStart}
+    />,
+    <img src={YahooLogo} alt="coingecko-icon" onDragStart={handleDragStart} />,
+    <img
+      src={matrixlabsIcon}
+      className="matrixlabsIcon"
+      alt="matrixlabs-icon"
+      onDragStart={handleDragStart}
+    />,
+  ];
   return (
     <>
+      <Navbar />
       <div className="backdropDiv1">
-        <Navbar />
         <div className="container-mainWrapper1">
           <div className="mainWrapper1" data-aos="fade-up">
             <div className="titleContent">
