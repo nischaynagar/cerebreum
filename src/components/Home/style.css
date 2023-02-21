@@ -1,6 +1,7 @@
 .transparentBtn{
     border-radius: 6px;
-    background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
+    background: linear-gradient(90deg, rgba(255, 0, 91, 0.2) 2.61%, rgba(171, 87, 255, 0.2) 48.6%, rgba(0, 164, 255, 0.2) 96.37%);
+    backdrop-filter: blur(2px);
     mix-blend-mode: normal;
     font-family: 'Open Sans';
     font-style: normal;
@@ -15,7 +16,10 @@
     flex-direction: column;
     padding: 2em 4em 7em 4em;
     align-items: center;
-    backdrop-filter: brightness(0.5);
+    --max-width: 1680px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
 }
 
 .mainWrapper2{
@@ -24,7 +28,7 @@
     padding: 10em 4em 7em 4em;
     align-items: center;
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
-    backdrop-filter: blur(5px) brightness(0.3);
+    background: #0C0016;
 }
 
 
@@ -33,14 +37,10 @@
     background-position: center;
 }
 .container-mainWrapper1{
-    --max-width: 2050px;
-    --container-padding: 1em;
-    width: min(var(--max-width), 100%);
-    margin-inline: auto;
+    width: 100%;
+    backdrop-filter: brightness(0.5);
 }
 .backdropDiv2{
-    background-image: url("../assests/images/bg-img2.png");
-    background-position: center;
 }
 
 .titleContent{
@@ -77,6 +77,11 @@
     cursor: pointer;
 }
 
+.btn1:hover{
+    background: linear-gradient(90deg, #C76BFF 1.72%, #FF2BD0 38.63%, #FF2887 67.34%);
+}
+
+
 .btn2{
     padding: 12px 28px;
     font-family: 'Open Sans';
@@ -90,6 +95,14 @@
     border-image: url("../assests/images/btn-bg.svg") 1 30 round;
     backdrop-filter: blur(15px);
     background: rgba(217, 217, 217, 0.13);
+}
+
+.btn2:hover{
+    background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .gradientTxt{
@@ -131,7 +144,7 @@
 
 .crousel{
     display: flex;
-    gap: 15px;
+    gap: 25px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -153,10 +166,38 @@
     color: #B1E3FF;
     font-weight: 700;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .crouselItem img{
     height: 160px;
+}
+
+.sparkle1{
+    background: #FF005B;
+    filter: blur(50px);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(78px, -70px);
+}
+
+.sparkle2{
+    background: #AB57FF;
+    filter: blur(50px);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(78px, 20px);
+}
+
+.sparkle3{
+    background: #00A4FF;
+    filter: blur(50px);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(78px, -70px);
 }
 
 .tokenomics{
@@ -164,27 +205,36 @@
     flex-direction: column;
     gap: 40px;
     max-width: 600px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.165) 0%, rgba(255, 255, 255, 0.04) 100%);
+    opacity: 0.7;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    height: fit-content;
+    align-self: flex-end;
 }
 
 .tokenomicsWrapper{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 100px;
     margin: 10em 0;
-    justify-content: center;
 }
 
 .tokenomicsWrapper img{
-    width: 25%;
+    width: 35%;
     max-width: 500px;
-    min-width: 250px;
+    min-width: 300px;
 }
 
 .tokenomicsFeatures{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     text-align: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .tokenomicsTxt{
@@ -199,6 +249,17 @@
     width: 70%;
     max-width: 477px;
     color: rgba(255, 255, 255, 0.79);
+}
+
+.tokenomicsDiv2{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.tokenomicsInfotxt2{
+    display: flex;
+    gap: 10px;
 }
 
 .optionsGrid{
@@ -266,24 +327,23 @@
 }
 
 .contactUsBtn{
-    padding: 10px 25px;
+    padding: 10px 35px;
     font-size: 17px;
     cursor: pointer;
-    border: 2px solid;
     border-radius: 5px;
-    border-image: url("../assests/images/btn-bg.svg") 1 30 round;
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    background: rgba(217, 217, 217, 0.13);
-    
+    background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
 }
 
-.binanceDiv{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns in big screen */
-    grid-template-rows: 1fr;
-    gap: 10px;
-    margin-bottom: 5em;
+.contactUsBtn:hover{
+    background: linear-gradient(90deg, #C76BFF 1.72%, #FF2BD0 38.63%, #FF2887 67.34%);
+}
+
+
+.partnerDiv{
+    display: flex;
+    gap: 50px;
+    margin: 10em 0 5em 0;
+    align-items: center;
 }
 
 b{
@@ -304,6 +364,7 @@ b{
 
 .stakingWrapper{
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-family: 'Open Sans';
     font-style: normal;
@@ -376,10 +437,226 @@ b{
 }
 
 .optionDivTxt{
-    max-width: 150px;
+    max-width: 210px;
 }
 
-@media only screen and (max-width: 650px) {
+.tokenomicsInfoTxt{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.roadmap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-top: 10em;
+}
+
+.roadmapHeadingWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.roadmapHeading{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+.roadmapImg{
+    width: 300px;
+}
+
+.stageLeft{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 50%;
+    transform: translateX(60px);
+}
+
+.stageRight{
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+}
+
+.stageList{
+    list-style-type: disc;
+}
+
+.stageWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.stageTitle1{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF005B;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle2{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF2BD0;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle3{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #A839FF;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.stageTitle4{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    color: #6934FF;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.stageList li{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.79);
+}
+
+.stage1{
+    transform: translateY(60px);
+}
+
+.stage3{
+    transform: translateY(-50px);
+}
+
+.stage4{
+    transform: translateY(-60px);
+}
+
+.meetTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    margin-top: 10em;
+}
+
+.meetTeamHeading{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+}
+
+.meetTeamHeadingWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.teamCrousel{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.teamCrouselItem img{
+    width: auto !important;
+    height: auto !important;
+}
+
+.teamCrouselItem{
+    display: flex;
+    height: 288px;
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.165) 0%, rgba(255, 255, 255, 0.04) 100%);
+    opacity: 0.7;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    padding: 25px;
+    gap: 10px;
+}
+
+.teamMemberWrapper{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.teamUsername{
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 600;   
+}
+
+.teamCrouselImg{
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.teamRole{
+    
+}
+
+.partnerDiv1{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.partnerDiv2{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+@media only screen and (max-width: 1020px) {
     .mainWrapper1{
         padding: 5px 10px;
     }
@@ -387,6 +664,7 @@ b{
         padding: 5px 10px;
     }
     .titleContent{
+        margin-top: 10em;
         padding: 0.5em 1em;
     }
     .mainHeadingTxt{
@@ -403,9 +681,10 @@ b{
     }
     .tokenomicsWrapper{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0.5em 1em;
         margin: 5em 0;
+        gap: 50px;
     }
     .tokenomicsTxt{
         font-size: 1.75rem;
@@ -437,6 +716,10 @@ b{
     .tokenomicsWrapper img{
         width: 270px;
         align-self: center;
+    }
+    .tokenomicsDiv2{
+        flex-direction: column-reverse;
+        gap: 50px;
     }
     .infoTxt{
         max-width: 80%;
@@ -480,6 +763,51 @@ b{
       .buyBtnWrapper{
         transform: translateX(-10px);
       }
+
+    .stageLeft {
+        flex-basis: 25%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 25%;
+        transform: translateX(20px);
+    }
+    .roadmapImg{
+        width: 200px;
+    }
+    .stage4 {
+        transform: translateY(-10px);
+    }
+    .stageList li{
+        font-size: 9px;
+        line-height: 12px;
+    }
+    .teamCrousel{
+        flex-direction: column;
+    }
+    .partnerDiv1{
+        flex-direction: column;
+        gap: 0;
+    }
+    .partnerDiv2{
+        flex-direction: column;
+        gap: 0;
+    }
+    .partnerDiv1 img{
+        height: 50px;
+    }
+    .partnerDiv2 img{
+        height: 50px;
+    }
+    .forbesIcon{
+
+    }
+    .bezingaIcon{
+        width: 150px;
+    }
+    .coinDeskIcon{
+        width: 150px;
+    }
 }
 .backdropDiv1>div{
     overflow-x: hidden;

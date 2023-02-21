@@ -10,6 +10,14 @@ import BenzingaLogo from "../assests/images/Benzinga-Logo-768x432.png";
 import CoinDeskLogo from "../assests/images/CoinDesk-logo.png";
 import ForbesPng from "../assests/images/forbes-png.png";
 import YahooLogo from "../assests/images/Yahoo.png";
+import roadmapImg from "../assests/images/roadmap.svg";
+import devImg1 from "../assests/images/dev-img1.jpg";
+import devImg2 from "../assests/images/dev-img2.jpg";
+import devImg3 from "../assests/images/dev-img3.jpg";
+import forbesIcon from "../assests/images/icon-forbes.svg";
+import coinDeskIcon from "../assests/images/icon-coindesk.svg";
+import bezingaIcon from "../assests/images/icon-benzinga.svg";
+import yahooIcon from "../assests/images/icon-yahoo.svg";
 import "./style.css";
 import Navbar from "../Navbar";
 import Aos from "aos";
@@ -89,16 +97,21 @@ export default function Home() {
             </div>
             <div className="crousel">
               <div className="crouselItem">
+                <div className="sparkle1"></div>
                 <img src={buytokenCrouselIcon} alt="buy-token-img" />
-                <div>Buy token</div>
+                <div>Buy the $CERAI token</div>
               </div>
               <div className="crouselItem">
+                <div className="sparkle2"></div>
                 <img src={aibotCrouselIcon} alt="buy-token-img" />
-                <div>AI bots do trading</div>
+                <div>Bots trade tax revenue</div>
               </div>
               <div className="crouselItem">
+                <div className="sparkle3"></div>
                 <img src={staketokenCrouselIcon} alt="buy-token-img" />
-                <div>Stake the tokens</div>
+                <div>Earn $CERAI & $USDT 
+                by staking
+                </div>
               </div>
             </div>
             <div className="nonNativeDiv">
@@ -118,18 +131,21 @@ export default function Home() {
             className="tokenomicsWrapper"
             data-aos="fade-up"
           >
+            <div className="headingUnderlineWrapper">
+                  <div className="tokenomicsTxt">Tokenomics</div>
+                  <div className="styledUnderline"></div>
+            </div>
+            <div className="tokenomicsDiv2">
+
             <img src={chart} alt="chart" />
             <div className="tokenomics">
               <div className="tokenomicsFeatures">
-                <div className="headingUnderlineWrapper">
-                  <div className="tokenomicsTxt">Tokenomics</div>
-                  <div className="styledUnderline"></div>
-                </div>
                 <div className="tokenomicsInfoTxt">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum lacus quam, accumsan non iaculis ac, ornare nec
-                  nulla. Duis mollis urna et tellus pharetra laoreet sit amet
-                  ultrices ligula.
+                  100,000,000 total supply
+                </div>
+                <div className="tokenomicsInfotxt2">
+                  <div>15% buy tax</div>
+                  <div>15% sell tax</div>
                 </div>
               </div>
               <div className="optionsGrid">
@@ -170,38 +186,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="contactUs" data-aos="fade-up">
-            <div className="contactUsHeading">Cerebreum Grant & Partners</div>
-            <div className="infoTxt">
-              We are offering a grant program as well as potential partnerships
-              with teams utilizing the $CERAI token, building amazing trading
-              systems & more!
             </div>
-            <div className="contactUsBtn">Contact us</div>
-          </div>
-          <div className="binanceDiv">
-            <img
-              className="binanceDivImg"
-              src={binanceIcon}
-              alt="binance-icon"
-            />
-            <img
-              className="binanceDivImg"
-              src={binanceIcon}
-              alt="binance-icon"
-            />
-            <img
-              className="binanceDivImg"
-              src={binanceIcon}
-              alt="binance-icon"
-            />
-            <img
-              className="binanceDivImg"
-              src={binanceIcon}
-              alt="binance-icon"
-            />
+
           </div>
           <div className="stakingWrapper" data-aos="fade-up">
             <div className="stakingheadingWrapper">
@@ -212,6 +198,130 @@ export default function Home() {
               <img src={stakingIcon} alt="staking-img" />
             </div>
           </div>
+          <div className="contactUs" data-aos="fade-up">
+            <div className="contactUsHeading">Cerebreum Grant & Partners</div>
+            <div className="infoTxt">
+              We are offering a grant program as well as potential partnerships with teams utilizing the $CERAI token, building amazing trading systems & more!
+            </div>
+            <div className="contactUsBtn">Contact us</div>
+          </div>
+
+          <div className="roadmap" data-aos="fade-up">
+            <div className="roadmapHeadingWrapper">
+                <div className="roadmapHeading">Roadmap</div>
+                <div className="styledUnderline"></div>
+              </div>
+              <div className="stageWrapper">
+
+              <div className="stageLeft">
+              <div className="stage2">
+                  <div className="stageTitle2">Stage</div>
+                    <ul className="stageList">
+                      <li>Additional chain & bridge</li>
+                      <li>2nd trading bot activated </li>
+                      <li>Project partnerships</li>
+                      <li>Secret new utility goes live</li>
+                    </ul>
+                </div>
+              <div className="stage4">
+                  <div className="stageTitle4">Stage</div>
+                    <ul className="stageList">
+                      <li>DAO launches to vote on treasury investments</li>
+                      <li>NFT collection w/ revenue generating use case (may be earlier depending on market)</li>
+                      <li>Second secret utility released</li>
+                    </ul>
+                </div>
+              </div>
+              <img className="roadmapImg" src={roadmapImg} alt="roadmapImg"/>
+              <div className="stageRight">
+                <div className="stage1">
+                  <div className="stageTitle1">Stage</div>
+                    <ul className="stageList">
+                      <li>Token sale & listing</li>
+                      <li>CMC/CG/Avedex</li>
+                      <li>1st trading algorithm begins w/ weekly payouts</li>
+                      <li>$CERAI staking pool to earn $CERAI + USDT rewards from trading</li>
+                    </ul>
+                </div>
+                <div className="stage3">
+                  <div className="stageTitle3">Stage</div>
+                    <ul className="stageList">
+                      <li>Grant partnership program growth </li>
+                      <li>New listings</li>
+                      <li>iOS / Android apps</li>
+                      <li>3-4th trading bot released</li>
+                    </ul>
+                </div>
+                </div>
+              </div>
+          </div>
+
+          <div className="meetTeam" data-aos="fade-up">
+            <div className="meetTeamHeadingWrapper">
+                <div className="meetTeamHeading">Meet our Team</div>
+                <div className="styledUnderline"></div>
+              </div>
+              <div className="teamCrousel">
+              <div className="teamCrouselItem">
+                <div className="sparkle1"></div>
+                <div className="teamCrouselImg">
+                  <img src={devImg1} alt="dev-img" />
+                </div>
+                <div className="teamMemberWrapper">
+                  <div className="teamRole">Lead dev / founder</div>
+                  <div className="teamUsername">@Skyhoox</div>
+                </div>
+              </div>
+              <div className="teamCrouselItem">
+                <div className="sparkle2"></div>
+                <div className="teamCrouselImg">
+                  <img src={devImg2} alt="dev-img" />
+                </div>
+                <div className="teamMemberWrapper">
+                  <div className="teamRole">Second dev / trader</div>
+                  <div className="teamUsername">@jackaitrader</div>
+                </div>
+              </div>
+              <div className="teamCrouselItem">
+                <div className="sparkle3"></div>
+                <div className="teamCrouselImg">
+                  <img src={devImg3} alt="dev-img" />
+                </div>
+                <div className="teamMemberWrapper">
+                  <div className="teamRole">CMO</div>
+                  <div className="teamUsername">@danielfriedman</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="partnerDiv" data-aos="fade-up">
+            <div className="partnerDiv1">
+              <img
+                className="forbesIcon"
+                src={forbesIcon}
+                alt="binance-icon"
+                />
+              <img
+                className="coinDeskIcon"
+                src={coinDeskIcon}
+                alt="binance-icon"
+                />
+              </div>
+            <div className="partnerDiv2">
+              <img
+              className="bezingaIcon"
+              src={bezingaIcon}
+              alt="binance-icon"
+              />
+            <img
+              className="yahooIcon"
+              src={yahooIcon}
+              alt="binance-icon"
+              />
+              </div>
+          </div>
+          
         </div>
       </div>
     </>

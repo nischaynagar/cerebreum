@@ -6,14 +6,21 @@
   font-weight: 700;
   padding: 10px 45px;
   cursor: pointer;
-  backdrop-filter: blur(15px);
-  background: linear-gradient(90deg, #D82C17 2.56%, #FF710A 92.24%);
+  background: linear-gradient(90deg, rgba(255, 0, 91, 0.2) 2.61%, rgba(171, 87, 255, 0.2) 48.6%, rgba(0, 164, 255, 0.2) 96.37%);
+  backdrop-filter: blur(2px);
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.5s ease;
+  border: 2px solid;
+  border-radius: 5px;
+  border-image: url("../assests/images/btn-bg.svg") 1 30 round;
 }
 
 .button:hover{
-  background: linear-gradient(90deg, #FF710A 2.56%, #D82C17 96.94%);
+  background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .primary-header {
@@ -28,7 +35,7 @@
 }
 
 .nav-wrapper {
-  padding: 1em 2em;
+  padding: 1em 4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,6 +66,14 @@
 .nav-list{
   color: white;
   cursor: pointer;
+}
+
+.nav-list li:hover{
+  background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .nav-list li{

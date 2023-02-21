@@ -89,12 +89,12 @@ export default function Navbar() {
                   <a href="#">Whitepaper</a>
                 </li>
                 <li className="toggleDisplay">
-                  <div className="button">Dapp</div>
+                  <div className="button">Contact us</div>
                 </li>
               </ul>
             </nav>
             <div className="button display-sm-hidden display-md-inline-flex">
-              Dapp
+              Contact us
             </div>
           </div>
         </div>
