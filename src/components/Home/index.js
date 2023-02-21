@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="backdropDiv1">
+      <div id="home" className="backdropDiv1">
         <div className="container-mainWrapper1">
           <div className="mainWrapper1" data-aos="fade-up">
             <div className="titleContent">

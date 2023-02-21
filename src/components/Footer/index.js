@@ -3,9 +3,19 @@ import Logo from "../assests/images/Logo.svg";
 import "./style.css";
 
 export default function Footer() {
+
+  
+  const handleClick = (event, id) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="Footer">
-      <img src={Logo} alt="logo" />
+         <a href="#home" onClick={(e) => handleClick(e, "home")}>
+          <img src={Logo} alt="logo" />
+        </a>
       <div>@2023 Cerebreum. All Rights Reserved.</div>
     </div>
   );
