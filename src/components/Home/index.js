@@ -203,7 +203,7 @@ export default function Home() {
             <div className="infoTxt">
               We are offering a grant program as well as potential partnerships with teams utilizing the $CERAI token, building amazing trading systems & more!
             </div>
-            <div className="contactUsBtn">Contact us</div>
+            <div className="contactUsBtn">Contact&nbsp;us</div>
           </div>
 
           <div className="roadmap" data-aos="fade-up">
