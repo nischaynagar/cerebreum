@@ -14,8 +14,8 @@ import roadmapImg from "../assests/images/roadmap.svg";
 import devImg1 from "../assests/images/dev-img1.jpg";
 import devImg2 from "../assests/images/dev-img2.jpg";
 import devImg3 from "../assests/images/dev-img3.jpg";
-import forbesIcon from "../assests/images/icon-forbes.svg";
-import coinDeskIcon from "../assests/images/icon-coindesk.svg";
+import pinkSaleIcon from "../assests/images/icon-pinksale.svg";
+import dexviewIcon from "../assests/images/icon-dexview.svg";
 import bezingaIcon from "../assests/images/icon-benzinga.svg";
 import yahooIcon from "../assests/images/icon-yahoo.svg";
 import "./style.css";
@@ -298,26 +298,26 @@ export default function Home() {
           <div className="partnerDiv" data-aos="fade-up">
             <div className="partnerDiv1">
               <img
-                className="forbesIcon"
-                src={forbesIcon}
-                alt="binance-icon"
+                className="pinkSaleIcon"
+                src={pinkSaleIcon}
+                alt="pinksale-icon"
                 />
               <img
-                className="coinDeskIcon"
-                src={coinDeskIcon}
-                alt="binance-icon"
+                className="dexviewIcon"
+                src={dexviewIcon}
+                alt="dexview-icon"
                 />
               </div>
             <div className="partnerDiv2">
               <img
               className="bezingaIcon"
               src={bezingaIcon}
-              alt="binance-icon"
+              alt="bezinga-icon"
               />
             <img
               className="yahooIcon"
               src={yahooIcon}
-              alt="binance-icon"
+              alt="yahoo-icon"
               />
               </div>
           </div>

@@ -656,6 +656,10 @@ b{
     gap: 50px;
 }
 
+.pinkSaleIcon{
+    width: 150px;
+}
+
 @media only screen and (max-width: 1020px) {
     .mainWrapper1{
         padding: 5px 10px;

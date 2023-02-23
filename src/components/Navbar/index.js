@@ -83,15 +83,18 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
+                  <a href="https://cerebreum-staking.netlify.app" target="_blank">Staking</a>
+                </li>
+                <li>
                   <a href="#">Whitepaper</a>
                 </li>
                 <li className="toggleDisplay">
-                  <div className="button">Contact us</div>
+                  <div className="button">Contact&nbsp;us</div>
                 </li>
               </ul>
             </nav>
             <div className="button display-sm-hidden display-md-inline-flex">
-              Contact us
+              Contact&nbsp;us
             </div>
           </div>
         </div>
