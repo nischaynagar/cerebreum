@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import { ReactComponent as Menu } from "../assests/images/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "../assests/images/icon-close.svg";
+import whitepaper from "../assests/Whitepaper.pdf";
 import Logo from "../assests/images/Logo.svg";
 
 export default function Navbar() {
@@ -86,7 +87,7 @@ export default function Navbar() {
                   <a href="https://cerebreum-staking.netlify.app" target="_blank">Staking</a>
                 </li>
                 <li>
-                  <a href="#">Whitepaper</a>
+                  <a download={"whitepaper"} href={whitepaper}>Whitepaper</a>
                 </li>
                 <li className="toggleDisplay">
                   <div className="button">Contact&nbsp;us</div>
