@@ -90,13 +90,13 @@ export default function Navbar() {
                   <a download={"whitepaper"} href={whitepaper}>Whitepaper</a>
                 </li>
                 <li className="toggleDisplay">
-                  <div className="button">Contact&nbsp;us</div>
+                  <a className="button">Contact&nbsp;us</a>
                 </li>
               </ul>
             </nav>
-            <div className="button display-sm-hidden display-md-inline-flex">
+            <a href="mailto:info@cerebreum.io" className="button display-sm-hidden display-md-inline-flex">
               Contact&nbsp;us
-            </div>
+            </a>
           </div>
         </div>
       </header>

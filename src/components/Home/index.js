@@ -71,8 +71,8 @@ export default function Home() {
                 <div className="gradientTxt">APY&nbsp;Token</div>
               </div>
               <div className="buyBtnWrapper">
-                <div className="btn1">Buy&nbsp;the&nbsp;token</div>
-                <div className="btn2">Stake&nbsp;Now</div>
+                <a href="https://www.pinksale.finance/launchpad/0x1a977a9a38dB7B5D0e293c3B8721Fd6f7bD23ACa?chain=Arbitrum" target="_blank" className="btn1">Buy&nbsp;the&nbsp;token</a>
+                <a href="https://cerebreum-staking.netlify.app" target="_blank" className="btn2">Stake&nbsp;Now</a>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
             <div className="howItWorksTxt">
               The more & longer you stake the bigger are the rewards which means
-              that earnings compound the longer u stake or don’t claim,
+              that earnings compound the longer you stake or don’t claim,
               <b> claim USDT rewards!</b>
             </div>
             <div className="crousel">
@@ -122,7 +122,7 @@ export default function Home() {
                 Cerebreum has worked with trading bots, lending & farming
                 products with long backtests. Taxes from token trading go into
                 the yield pool, are profited from, and claimable as earnings in
-                $USDT a for token stakers.
+                $USDT for token stakers.
               </div>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="infoTxt">
               We are offering a grant program as well as potential partnerships with teams utilizing the $CERAI token, building amazing trading systems & more!
             </div>
-            <div className="contactUsBtn">Contact&nbsp;us</div>
+            <a href="mailto:info@cerebreum.io" className="contactUsBtn">Contact&nbsp;us</a>
           </div>
 
           <div className="roadmap" data-aos="fade-up">
