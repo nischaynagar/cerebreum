@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="gradientTxt">APY&nbsp;Token</div>
               </div>
               <div className="buyBtnWrapper">
-                <a href="https://www.pinksale.finance/launchpad/0x1a977a9a38dB7B5D0e293c3B8721Fd6f7bD23ACa?chain=Arbitrum" target="_blank" className="btn1">Buy&nbsp;the&nbsp;token</a>
+                <a href="https://www.pinksale.finance/launchpad/0xF3a1B4751bbFeae07a0eb3A29761e77F95C454bA?chain=Arbitrum" target="_blank" className="btn1">Buy&nbsp;the&nbsp;token</a>
                 <a href="https://cerebreum-staking.netlify.app" target="_blank" className="btn2">Stake&nbsp;Now</a>
               </div>
             </div>
