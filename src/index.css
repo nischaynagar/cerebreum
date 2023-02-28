@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     font: inherit;
+    -webkit-tap-highlight-color: transparent;
   }
   
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -22,6 +23,7 @@
   /* Set core root defaults */
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
   
   html,
@@ -29,6 +31,7 @@
     /* overflow-x: hidden; */
     height: 100%;
     font-family: 'Open Sans';
+    -webkit-tap-highlight-color: transparent;
   }
  
   /* Set core body defaults */

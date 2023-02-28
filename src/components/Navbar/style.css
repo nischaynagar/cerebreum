@@ -23,6 +23,10 @@
   text-fill-color: transparent;
 }
 
+.button:focus{
+  outline: none;
+}
+
 .primary-header {
   z-index: 5;
   padding-top: 0.5rem;
@@ -32,6 +36,7 @@
   position: fixed;
   width: 100%;
   top: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-wrapper {
@@ -68,6 +73,10 @@
   cursor: pointer;
 }
 
+.nav-list:focus{
+  outline: none;
+}
+
 .nav-list li:hover{
   background: linear-gradient(90deg, #FF2887 1.72%, #FF2BD0 33.5%, #C76BFF 64.91%);
   -webkit-background-clip: text;
@@ -78,6 +87,7 @@
 
 .nav-list li{
   font-weight: 700;
+  outline: none;
 }
 
 /* .logo{
@@ -94,6 +104,7 @@ font-family: "Montserrat";
 .logo{
   width: max-content;
   height: max-content;
+  outline: none;
 }
 
 .display-sm-hidden {

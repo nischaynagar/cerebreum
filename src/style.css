@@ -3,4 +3,10 @@
   flex-direction: column;
   background: black;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
+
+a:focus{
+  outline: none;
+}
+

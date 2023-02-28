@@ -90,7 +90,7 @@ export default function Navbar() {
                   <a download={"whitepaper"} href={whitepaper}>Whitepaper</a>
                 </li>
                 <li className="toggleDisplay">
-                  <a className="button">Contact&nbsp;us</a>
+                  <a href="mailto:info@cerebreum.io" className="button">Contact&nbsp;us</a>
                 </li>
               </ul>
             </nav>
